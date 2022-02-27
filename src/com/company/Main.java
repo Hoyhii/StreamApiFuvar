@@ -10,5 +10,6 @@ public class Main {
         System.out.println("negyedik feladat: "+fuvars.getLeghosszabbIdotartam());
         System.out.println("otodik feladat: "+fuvars.getLegBokezubbBorravaloju());
         System.out.println("hatodik feladat: "+fuvars.getKilometerId(4261));
+        System.out.println("nyolcadik feladat: "+fuvars.szerepelE(1452));
     }
 }

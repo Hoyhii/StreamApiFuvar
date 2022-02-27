@@ -48,4 +48,7 @@ public class Fuvars {
     public double getKilometerId(int id) {
         return this.fuvarLista.stream().filter(fuvar -> fuvar.getTaxi_id() == id).mapToDouble(Fuvar::getKilometer).sum();
     }
+    public String szerepelE(int id) {
+        return this.fuvarLista.stream().anyMatch(fuvar -> fuvar.getTaxi_id() == id) ? "igen" : "nem";
+    }
 }
