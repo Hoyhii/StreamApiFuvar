@@ -51,6 +51,12 @@ public class Fuvar {
     public double getBevetel(){
         return getBorravalo()+getViteldij();
     }
+    public double getBorravaloViteldijAranya(){
+        return this.borravalo/this.getViteldij();
+    }
+    public double getKilometer(){
+        return this.tavolsag *1.6;
+    }
 
 
 

@@ -42,4 +42,10 @@ public class Fuvars {
     public Fuvar getLeghosszabbIdotartam() {
         return this.fuvarLista.stream().max(Comparator.comparingInt(Fuvar::getIdotartam)).get();
     }
+    public Fuvar getLegBokezubbBorravaloju() {
+        return this.fuvarLista.stream().max(Comparator.comparingDouble(Fuvar::getBorravaloViteldijAranya)).get();
+    }
+    public double getKilometerId(int id) {
+        return this.fuvarLista.stream().filter(fuvar -> fuvar.getTaxi_id() == id).mapToDouble(Fuvar::getKilometer).sum();
+    }
 }

@@ -8,5 +8,7 @@ public class Main {
         System.out.println("masodik feladat, ennyi fuvarja volt a 6185-ös taxisnak: "+fuvars.gethanyFuvar(6185) + " Bevétele: " + fuvars.getEgyediBevetel(6185));
         System.out.println("harmadik feladat: "+fuvars.getMerfold());
         System.out.println("negyedik feladat: "+fuvars.getLeghosszabbIdotartam());
+        System.out.println("otodik feladat: "+fuvars.getLegBokezubbBorravaloju());
+        System.out.println("hatodik feladat: "+fuvars.getKilometerId(4261));
     }
 }
