@@ -48,6 +48,10 @@ public class Fuvar {
         return fizetes_modja;
     }
 
+    public double getBevetel(){
+        return getBorravalo()+getViteldij();
+    }
+
 
 
     @Override

@@ -29,4 +29,10 @@ public class Fuvars {
     public long getfuvarCount() {
         return this.fuvarLista.stream().count();
     }
+    public long gethanyFuvar(int id) {
+        return this.fuvarLista.stream().filter(fuvar -> fuvar.getTaxi_id() == id).count();
+    }
+    public double getEgyediBevetel(int id) {
+        return this.fuvarLista.stream().filter(fuvar -> fuvar.getTaxi_id() == id).mapToDouble(Fuvar::getBevetel).sum();
+    }
 }
