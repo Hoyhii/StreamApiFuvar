@@ -11,5 +11,12 @@ public class Main {
         System.out.println("otodik feladat: "+fuvars.getLegBokezubbBorravaloju());
         System.out.println("hatodik feladat: "+fuvars.getKilometerId(4261));
         System.out.println("nyolcadik feladat: "+fuvars.szerepelE(1452));
+        System.out.println("kilencedik feladat: ");
+        for (Fuvar fuvar : fuvars.getHaromLegrovidebbFuvar()) {
+            System.out.println(fuvar + "\n");
+        }
+        System.out.println(String.format("tizedik feladat:"+fuvars.getHanyFuvar("12-24")));
+        System.out.println(String.format("tizenegyedik feladat:"+fuvars.getHanyFuvar("12-31")));
+
     }
 }

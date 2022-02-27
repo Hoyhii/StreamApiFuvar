@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Fuvars {
     private List<Fuvar> fuvarLista;
@@ -50,5 +51,14 @@ public class Fuvars {
     }
     public String szerepelE(int id) {
         return this.fuvarLista.stream().anyMatch(fuvar -> fuvar.getTaxi_id() == id) ? "igen" : "nem";
+    }
+    public List<Fuvar> getHaromLegrovidebbFuvar() {
+        return fuvarLista.stream().filter(fuvar -> fuvar.getIdotartam() >= 1).sorted(Comparator.comparingInt(Fuvar::getIdotartam)).limit(3).collect(Collectors.toList());
+    }
+    public long getHanyFuvar(String string) {
+        return fuvarLista.stream().filter(fuvar -> fuvar.getIndulas().contains(string)).count();
+    }
+    public double getFuvarBorravaloArany(String string) {
+        return fuvarLista.stream().filter(fuvar -> fuvar.getIndulas().contains(string)).mapToDouble(fuvar -> fuvar.getBorravalo() / fuvar.getViteldij()).sum();
     }
 }
