@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Fuvars {
@@ -34,5 +35,11 @@ public class Fuvars {
     }
     public double getEgyediBevetel(int id) {
         return this.fuvarLista.stream().filter(fuvar -> fuvar.getTaxi_id() == id).mapToDouble(Fuvar::getBevetel).sum();
+    }
+    public double getMerfold() {
+        return this.fuvarLista.stream().mapToDouble(Fuvar::getTavolsag).sum();
+    }
+    public Fuvar getLeghosszabbIdotartam() {
+        return this.fuvarLista.stream().max(Comparator.comparingInt(Fuvar::getIdotartam)).get();
     }
 }

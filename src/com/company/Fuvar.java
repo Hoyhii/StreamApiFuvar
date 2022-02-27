@@ -56,14 +56,13 @@ public class Fuvar {
 
     @Override
     public String toString() {
-        return "Fuvar{" +
+        return "Fuvar: " +
                 "taxi_id=" + taxi_id +
-                ", indulas='" + indulas + '\'' +
+                ", indulas='" + indulas +
                 ", idotartam=" + idotartam +
                 ", tavolsag=" + tavolsag +
                 ", viteldij=" + viteldij +
                 ", borravalo=" + borravalo +
-                ", fizetes_modja='" + fizetes_modja + '\'' +
-                '}';
+                ", fizetes_modja=" + fizetes_modja;
     }
 }
