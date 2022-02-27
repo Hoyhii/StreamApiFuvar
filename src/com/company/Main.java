@@ -16,7 +16,7 @@ public class Main {
             System.out.println(fuvar + "\n");
         }
         System.out.println(String.format("tizedik feladat:"+fuvars.getHanyFuvar("12-24")));
-        System.out.println(String.format("tizenegyedik feladat:"+fuvars.getHanyFuvar("12-31")));
+        System.out.println(String.format("tizenegyedik feladat:"+fuvars.getFuvarBorravaloArany("12-31")));
 
     }
 }
