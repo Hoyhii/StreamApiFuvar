@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Fuvars {
     private List<Fuvar> fuvarLista;
@@ -60,5 +61,20 @@ public class Fuvars {
     }
     public double getFuvarBorravaloArany(String string) {
         return fuvarLista.stream().filter(fuvar -> fuvar.getIndulas().contains(string)).mapToDouble(fuvar -> fuvar.getBorravalo() / fuvar.getViteldij()).sum();
+    }
+    public Stream<Fuvar> getInvalids() {
+        return this.fuvarLista.stream().filter(
+                fuvar -> fuvar.getIdotartam() > 0 && fuvar.getViteldij() > 0.0 && fuvar.getTavolsag() == 0);
+    }
+    public long getNemValidCount() {
+        return this.getInvalids().count();
+    }
+
+    public long getNemValidIdotartamSum() {
+        return this.getInvalids().mapToInt(Fuvar::getIdotartam).sum();
+    }
+
+    public double getNemValidBevetelSum() {
+        return this.getInvalids().mapToDouble(Fuvar::getBevetel).sum();
     }
 }

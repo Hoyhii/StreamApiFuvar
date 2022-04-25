@@ -10,6 +10,7 @@ public class Main {
         System.out.println("negyedik feladat: "+fuvars.getLeghosszabbIdotartam());
         System.out.println("otodik feladat: "+fuvars.getLegBokezubbBorravaloju());
         System.out.println("hatodik feladat: "+fuvars.getKilometerId(4261));
+        System.out.printf("hetedik feladat: %d darab hibás fuvar van, aminek összes időtartama %d és teljes bevétele %f dollár\n",fuvars.getNemValidCount(), fuvars.getNemValidIdotartamSum(), fuvars.getNemValidBevetelSum());
         System.out.println("nyolcadik feladat: "+fuvars.szerepelE(1452));
         System.out.println("kilencedik feladat: ");
         for (Fuvar fuvar : fuvars.getHaromLegrovidebbFuvar()) {
